@@ -31,6 +31,36 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING,
       },
+      classId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Classes',
+          key: 'id'
+        }
+      },
+      subjectId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Subjects',
+          key: 'id',
+        }
+      },
+      gradeId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Grades',
+          key: 'id',
+        }
+      }
     })
   },
 
