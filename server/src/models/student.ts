@@ -26,3 +26,5 @@ Student.init({
   sequelize: db,
   modelName: "Students"
 })
+
+export default Student;
